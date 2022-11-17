@@ -1,0 +1,52 @@
+.post__info {
+    width: 1360px;
+    display:inline-flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    margin-top: 70px;
+    max-width: 100%;
+}
+.booking__relax {
+    margin: 0;
+    width: 25%;
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: diamond_girl_skinny_skinny;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.booking {
+    width: 50%;
+    padding-left: 40px;
+
+}
+.booking__info {
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.booking__list {
+    width: 25%;
+    padding-left: 40px;
+}
+.booking__list-items {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    padding-left: 30px;
+    &::before {
+        content: "";
+        position: relative;
+        left: -20px;
+        width: 30px;
+        height: 1.73em;
+        margin-bottom: -1.73em;
+        background-image: url(../../images/asd\).svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+}
+.booking__list-style {
+    margin: 0;
+    list-style-type: none;
+}

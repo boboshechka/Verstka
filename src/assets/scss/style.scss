@@ -1,0 +1,52 @@
+html {
+    font-family: 'Open Sans';
+    font-size: 17;
+    font-weight: 400;
+    line-height: 1.73;
+    -webkit-text-size-adjust: 100%;
+    background: #fff;
+    color: #223225;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+body {
+    margin: 0;
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+a{
+    color: #424b42;
+    text-decoration: none;
+}
+
+ul li {
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+/*Fonts*/
+@font-face {
+    font-family: "Guerrilla";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/src/assets/fonts/ofont.ru_Guerrilla.woff2");
+}
+
+
+/* Blocks */
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/add-post.scss";
+@import "blocks/next__container.scss";
+@import "blocks/post.scss";
+@import "blocks/btn.scss";
+@import "blocks/booking.scss";
+@import "blocks/full_relax.scss";
+@import "blocks/activities.scss";
+

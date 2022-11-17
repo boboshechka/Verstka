@@ -1,0 +1,57 @@
+.container {
+    display: block;
+    width: 100%;
+    background: no-repeat;
+    align-items: center;
+    min-height: calc((100vh - 92px) - 20vh);
+    background-size: 100%;
+    background-image: url("https://alpencamp.ru/wp-content/themes/yootheme/cache/DJI_0615-редакт-2-scaled-a68cdd1a.webp");
+}
+
+.add-post {
+    text-align: center;
+    color: white;
+    display: flow-root;
+    box-sizing: content-box;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 140px;
+    background-position-x: 50%;
+}
+
+.add-post__logo {
+    transform: translateY(0px);
+    opacity: 1;
+    font-size: 70px;;
+    line-height: 1.1;
+    font-family: 'Guerrilla';
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::before {
+    content: '';
+      display: block;
+      height: 1.5px;
+      width: 300px;
+      text-align: center;
+      background: white;
+    }
+}
+.add-post__paragraph {
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: diamond_girl_skinny_skinny;
+    font-weight: 700;
+    text-transform: uppercase;
+    &::after {
+        content: '';
+          display: block;
+          height: 1.5px;
+          width: 300px;
+          text-align: center;
+          background: white;
+        }
+}

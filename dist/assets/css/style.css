@@ -1,0 +1,553 @@
+@charset "UTF-8";
+
+html {
+    font-family: "Open Sans";
+    font-size: 17;
+    font-weight: 400;
+    line-height: 1.73;
+    -webkit-text-size-adjust: 100%;
+    background: #fff;
+    color: #223225;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    color: #424b42;
+    text-decoration: none;
+}
+
+ul li {
+    -webkit-padding-before: 0;
+    padding-block-start: 0;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+/*Fonts*/
+@font-face {
+    font-family: "Guerrilla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/assets/fonts/ofont.ru_Guerrilla.woff2");
+}
+/* Blocks */
+.header {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 93px;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    padding: 0 30px 0 40px;
+    border-right: 1px solid gray;
+}
+
+.nav {
+    margin: 0 auto;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nav__list {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.nav__item {
+    position: relative;
+}
+
+.nav__item:hover > .subnav {
+    display: block;
+}
+
+.nav__link {
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+}
+
+.nav__link.has-subnav {
+    position: relative;
+    padding-right: 3rem;
+}
+
+.nav__link.has-subnav::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    top: 50%;
+    right: 1.35rem;
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+}
+
+.subnav {
+    width: 222px;
+    background-color: #585252;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+}
+
+.subnav__link {
+    position: fixed;
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 9px 12px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.subnav__link:hover {
+    text-decoration: none;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    background: no-repeat;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100vh - 92px - 20vh);
+    background-size: 100%;
+    background-image: url("https://alpencamp.ru/wp-content/themes/yootheme/cache/DJI_0615-редакт-2-scaled-a68cdd1a.webp");
+}
+
+.add-post {
+    text-align: center;
+    color: white;
+    display: flow-root;
+    box-sizing: content-box;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 140px;
+    background-position-x: 50%;
+}
+
+.add-post__logo {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+    font-size: 70px;
+    line-height: 1.1;
+    font-family: "Guerrilla";
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.add-post__logo::before {
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 300px;
+    text-align: center;
+    background: white;
+}
+
+.add-post__paragraph {
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: diamond_girl_skinny_skinny;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.add-post__paragraph::after {
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 300px;
+    text-align: center;
+    background: white;
+}
+
+.background {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.next__container {
+    display: flow-root;
+    box-sizing: content-box;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 210px;
+    padding-bottom: 210px;
+}
+
+.next__container::before {
+    background-image: url(images/asd.svg);
+    content: "";
+    display: block;
+    position: absolute;
+    top: -44px;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background-repeat: repeat-x;
+}
+
+.info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.left__text {
+    width: 50%;
+}
+
+.left__text h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.info__title {
+    margin: 0;
+}
+
+.info__text {
+    margin: 0;
+}
+
+.info__text--mg20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.right__picture {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.right__picture img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.services {
+    display: flow-root;
+    position: relative;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.post {
+    display: flow-root;
+    box-sizing: border-box;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: #fff;
+    background-image: url(../../images/background-texture.png) repeat center center;
+    background-size: cover;
+    background-position-x: 50%;
+    max-width: 100%;
+    width: 1360px;
+}
+
+.post__title {
+    font-size: 70px;
+    line-height: 1.1;
+    color: #424b42;
+    font-family: guerrillanormal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.post__photos {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.post__photo1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 437px;
+    width: 312px;
+    margin: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.post__photo1--pddingl {
+    padding-left: 40px;
+}
+
+.post__photo2 {
+    height: 437px;
+    margin: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 50%;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-left: 40px;
+    text-align: right;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 0 40px;
+    line-height: 49px;
+    font-size: 16px;
+    color: #4f9d57;
+    border: 3px solid #60934c;
+    background-color: transparent;
+    border-image-source: url(../../images/Без\ названия.svg);
+    border-image-slice: 3;
+    border-image-width: 3px;
+    border-image-repeat: round;
+    background-origin: border-box;
+}
+
+.post__info {
+    width: 1360px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin-top: 70px;
+    max-width: 100%;
+}
+
+.booking__relax {
+    margin: 0;
+    width: 25%;
+    font-size: 30px;
+    line-height: 1.4;
+    font-family: diamond_girl_skinny_skinny;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.booking {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.booking__info {
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.booking__list {
+    width: 25%;
+    padding-left: 40px;
+}
+
+.booking__list-items {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    padding-left: 30px;
+}
+
+.booking__list-items::before {
+    content: "";
+    position: relative;
+    left: -20px;
+    width: 30px;
+    height: 1.73em;
+    margin-bottom: -1.73em;
+    background-image: url(../../images/asd\).svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.booking__list-style {
+    margin: 0;
+    list-style-type: none;
+}
+
+.full__relax {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.full__relax-post {
+    display: flow-root;
+    box-sizing: content-box;
+    max-width: 1360px;
+}
+
+.full__relax-top {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+}
+
+.full__relax-topLeft {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.full__relax-topLeft h2 {
+    font-size: 65px;
+    line-height: 1.1;
+    color: #424b42;
+    font-family: guerrillanormal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.full__relax-topLeft span {
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: diamond_girl_skinny_skinny;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #60934c;
+}
+
+.full__relax-topRight {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 40px;
+    width: 50%;
+    margin: 0;
+}
+
+.full_relax-bot {
+    display: -ms-flexbox;
+    display: flex;
+    width: 1360px;
+    -ms-flex: 1 1 25%;
+    flex: 1 1 25%;
+    margin-top: 40px;
+}
+
+.full__relax-botContent {
+    box-sizing: border-box;
+    width: 100%;
+    -ms-flex: auto;
+    flex: auto;
+}
+
+.full__relax-botImg {
+    padding-left: 40px;
+}
+
+.full__relax-botImg--padleft0 {
+    padding-left: 0;
+}
+
+.full__relax-botImg img {
+    display: block;
+    width: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.relax-paragraph {
+    padding-left: 40px;
+}
+
+.relax-paragraph-1 {
+    padding-left: 0;
+}
+
+.container-activities {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url(https://alpencamp.ru/wp-content/themes/yootheme/cache/home-activities-bg-9880edf7.jpeg);
+    background-position: 100% 100%;
+    background-size: 1366px;
+}
+
+.activities {
+    display: -ms-flexbox;
+    display: flex;
+    width: 1360px;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 140px;
+}
+
+.activities-left {
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+}
+
+.activities-photo {
+    display: block;
+    padding-left: 40px;
+}
+
+.activities-photo img {
+    display: block;
+    width: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.activities-right {
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+}
